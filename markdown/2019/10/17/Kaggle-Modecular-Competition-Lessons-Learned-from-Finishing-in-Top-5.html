@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5 | Deep learning blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
+<meta property="og:description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
+<link rel="canonical" href="https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
+<meta property="og:url" content="https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
+<meta property="og:site_name" content="Deep learning blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-17T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition","@type":"BlogPosting","headline":"Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5","dateModified":"2019-10-17T00:00:00-05:00","datePublished":"2019-10-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html"},"url":"https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/mrtunguyen.github.io/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrtunguyen.github.io/mrtunguyen.github.io/feed.xml" title="Deep learning blog" /><link rel="shortcut icon" type="image/x-icon" href="/mrtunguyen.github.io/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5 | Deep learning blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
+<meta property="og:description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
+<link rel="canonical" href="https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
+<meta property="og:url" content="https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
+<meta property="og:site_name" content="Deep learning blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-17T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition","@type":"BlogPosting","headline":"Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5","dateModified":"2019-10-17T00:00:00-05:00","datePublished":"2019-10-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html"},"url":"https://mrtunguyen.github.io/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://mrtunguyen.github.io/mrtunguyen.github.io/feed.xml" title="Deep learning blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/mrtunguyen.github.io/">Deep learning blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/mrtunguyen.github.io/about/">About Me</a><a class="page-link" href="/mrtunguyen.github.io/search/">Search</a><a class="page-link" href="/mrtunguyen.github.io/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5</h1><p class="page-description">Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2019-10-17T00:00:00-05:00" itemprop="datePublished">
+        Oct 17, 2019
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/mrtunguyen.github.io/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#a-little-words-about-kaggle">A little words about Kaggle</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#kaggle-is-the-best-school-participants-are-the-best-teachers-and-my-teammates-are-the-best-companions-ive-had">Kaggle is the best school, participants are the best teachers and my teammates are the best companions I’ve had</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#about-the-competition-predicting-molecular-properties">About the competition: Predicting Molecular Properties</a></li>
+<li class="toc-entry toc-h1"><a href="#background">Background</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#1-a-good-validation-strategy-is-half-of-success">1. A good validation strategy is half of success</a></li>
+<li class="toc-entry toc-h2"><a href="#2-classical-machine-learning-ideas-possibly-work-in-deep-learning">2. Classical Machine learning ideas possibly work in deep learning</a></li>
+<li class="toc-entry toc-h2"><a href="#3-always-keep-updated-state-of-the-art-of-the-field-either-nlp-or-computer-vision">3. Always keep updated state-of-the-art of the field (either NLP or Computer Vision)</a></li>
+<li class="toc-entry toc-h2"><a href="#4-test-ideas-with-simple-model-before-going-bigger">4. Test ideas with simple model before going bigger</a></li>
+<li class="toc-entry toc-h2"><a href="#5-how-to-structure-code-when-testing-many-ideas">5. How to structure code when testing many ideas</a></li>
+<li class="toc-entry toc-h2"><a href="#6-working-in-a-team-helps-you-go-faster-and-further">6. Working in a team helps you go faster and further</a></li>
+</ul>
+</li>
+</ul><p>In the recent <a href="https://www.kaggle.com/c/champs-scalar-coupling">Kaggle Predicting Molecular Properties Competition</a>, my team has managed to finish in 5th place (out of 2749 teams). It is the first competition that I spent seriously a lot of time and I learned a lot through it. Though I don’t consider myself as a Kaggle expert by any means, I want to share some lessons, insights that hopefully can be helpful for others.</p>
+
+<h1 id="a-little-words-about-kaggle">
+<a class="anchor" href="#a-little-words-about-kaggle" aria-hidden="true"><span class="octicon octicon-link"></span></a>A little words about Kaggle</h1>
+<h2 id="kaggle-is-the-best-school-participants-are-the-best-teachers-and-my-teammates-are-the-best-companions-ive-had">
+<a class="anchor" href="#kaggle-is-the-best-school-participants-are-the-best-teachers-and-my-teammates-are-the-best-companions-ive-had" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kaggle is the best school, participants are the best teachers and my teammates are the best companions I’ve had</h2>
+
+<p>Kaggle is undoubtly a great platform with all sorts of interesting problems along with datasets, kernels and great discussions. Like what I saw in a post long time ago, Kaggle is definitely a home for data science enthusiats all around the world where they spend their days and nights to challenge themselves. And now I would say that I’m very proud to be one of them. Since I’m not graduated from any school formation of data science like many of others, Kaggle comes to me as a place where I can learn many things, keep me motivated in the field which is moving a lot every day. The people like <a href="https://www.kaggle.com/hengck23">Heng</a> are the best teachers I’ve had, not only from their insights and sharing about competitions but also from the way how they work.
+Moreover, one of the most important features I love about Kaggle is Leaderboard where we could see where we’re standing compared to others. During this competition, I admit that the first thing I did when waking up every morning is looking at the leaderboard. Seeing many competitors passing above me in the ranking helps me to benchmark my skills, push me to learn and try new things which is very important in my career.
+So if you want to really get into Machine learning or Data Science, I believe that Kaggle comes in as one of the best ways.</p>
+
+<h1 id="about-the-competition-predicting-molecular-properties">
+<a class="anchor" href="#about-the-competition-predicting-molecular-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>About the competition: Predicting Molecular Properties</h1>
+
+<p>This competition is sponsored by the the Chemistry and Mathematics in Phase Space (CHAMPS) at the University of Bristol, Cardiff University, Imperial College and the University of Leeds. It requires competitors to predict the magnetic interaction between two atoms in a molecule (i.e the scalar coupling constant). The objective of using machine learning models in this kind of project is to allow medicinal chemists to gain structural insights faster and cheaper than the quantum mechanic methods and to enable scientists to understand how the 3D chemical structure of a molecule affects its propeties and behavior. Such tools will enable researchers to make progress in a range of important problems, like designing molecules to carry out specific cellular tasks, or designing better drug molecules to fight disease. See more about it in <a href="https://www.kaggle.com/c/champs-scalar-coupling">here</a></p>
+
+<h1 id="background">
+<a class="anchor" href="#background" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background</h1>
+
+<p>At first, my team didn’t had any domain expertise, prior knowledge about chemistry or molecular properties. But we found this competition very interesting to discover a new application of machine learning. <a href="https://www.kaggle.com/lamdang">Lam</a> is the first who started in our team and realized that using Graph Neural Network (GNN) gains better score than classical machine learning models (like Xgboost or LightGBM). He found out an interesting <a href="https://arxiv.org/abs/1812.05055">paper</a> about using GNN for molecular properties and tried to implement it in this competition. After few submissions, he managed to get into top 3 in public Leaderboard at the beginning of the competition. <a href="https://www.kaggle.com/grjhuard">Guillaume</a> and I joined it later with different angle of view. Firstly, I tried to experiment ideas of Heng, using <a href="https://arxiv.org/abs/1704.01212">Neural Message Passing for Quantum Chemistry</a> for which he published in the dicussion forum (with his starter code). I also devoted an amount of my time to grasp some knowledge about molecular properties and their interaction. Thereafter, I read different relevant papers in this kind of task in order to better understand how GNN works. The interesting idea behind GNN from machine learning standpoint is finding a representation of a molecule as a graph with atoms as nodes and bonds as edges and how information flow between nodes-nodes, nodes-bonds or bonds-bonds. For example, the assumption that two nodes have a relationship and interact each other is expressed by an edge between them. Similarly, the absence of an edge expresses the assumption that the nodes have no relationship and should not influence each other directly. I also tried another deep learning architecture like <a href="https://arxiv.org/pdf/1806.01261.pdf">Schnet</a> or adding another molecular features by reading dicussions/kernels in kaggle forum before sticking into <a href="https://arxiv.org/abs/1812.05055">MEGNET</a>. Lam, Guillaume and I decided to merger as a team one month before competition end when each person has his own good competitive model. For more details, our solution write-up can be found <a href="https://www.kaggle.com/c/champs-scalar-coupling/discussion/106864#614330">here</a></p>
+
+<p>And now, below are few lessons that I’ve learned so far from this competition:</p>
+
+<h2 id="1-a-good-validation-strategy-is-half-of-success">
+<a class="anchor" href="#1-a-good-validation-strategy-is-half-of-success" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. A good validation strategy is half of success</h2>
+<p>I read an <a href="http://blog.kaggle.com/2018/05/07/profiling-top-kagglers-bestfitting-currently-1-in-the-world/">interview</a> of bestfitting about his strategy of winning competitions in Kaggle. He said that a good CV is half of success. I couldn’t agree more. Every try we made, it should improve both on our local CV and on the public LB. In this competition, we set aside 5000 moleculars for validation and 80000 ones for training. And luckily, validation score and public leaderboard score is very close so that we are very sure about evaluation of our models. This closeness makes us feel confident with our stacking strategy at the end.  <br>
+So, always trust your CV more than the leaderboard. The public leaderboard represents only 29% of the actual test set, so you can’t be sure about the quality of your solution based on this percentage. Sometimes your model might be great overall, but bad on the data, specially in the public test set.
+The experience from <a href="https://www.linkedin.com/pulse/my-team-won-20000-1st-place-kaggles-earthquake-corey-levinson/">here</a> and <a href="https://www.kaggle.com/c/severstal-steel-defect-detection">recent finished competition</a> make this lesson more valuable.</p>
+
+<h2 id="2-classical-machine-learning-ideas-possibly-work-in-deep-learning">
+<a class="anchor" href="#2-classical-machine-learning-ideas-possibly-work-in-deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Classical Machine learning ideas possibly work in deep learning</h2>
+<p>When using classical machine learning models like xgboost or Lightgbm, we often heard many times about feature importance technique. While they are widely used in many tabular problems, it is less likely happen in deep learning. But my teammate Guillaume has proven the opposite. After testing feature importance (by randomize one feature at the prediction step), he noticed that the most important feature was by far the angle between an edge and the edge with the closest atom to the first edge. This insight gave us a 0.15 improvement for our best single model.</p>
+
+<h2 id="3-always-keep-updated-state-of-the-art-of-the-field-either-nlp-or-computer-vision">
+<a class="anchor" href="#3-always-keep-updated-state-of-the-art-of-the-field-either-nlp-or-computer-vision" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Always keep updated state-of-the-art of the field (either NLP or Computer Vision)</h2>
+<p>I encountered many data scientists who said that since they are only working in Computer Vision, they don’t have any interest to invest their time in NLP models. For me, I don’t feel that way. When this competition was finished and the solution of top teams were released, all top 6 teams, except our team, were using a technique that is recently very popular in NLP community - <a href="https://arxiv.org/abs/1706.03762">Transformer</a>. The way that they integrated Transformer in their model is quite eye opening for us.</p>
+
+<h2 id="4-test-ideas-with-simple-model-before-going-bigger">
+<a class="anchor" href="#4-test-ideas-with-simple-model-before-going-bigger" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Test ideas with simple model before going bigger</h2>
+<p>One of the big mistakes I made during this competition is implementing a quite big models in first try. In fact, when my teammates told me about megnet models, I read the paper, write code from scatch and run it with 5 layers while trying to add some new ideas. It took me half day to run and realized that it doesn’t converge at all. Since it is quite deep, I’m kind of stuck in finding why this model doesn’t work as expected. After discussing with my team and simplifing model to only 1 layer, I figured out errors in my implementation. One of the important errors is using Normalization. Indeed, BatchNorm makes the loss fluctuate a lot while LayerNorm works much better in this case.</p>
+
+<h2 id="5-how-to-structure-code-when-testing-many-ideas">
+<a class="anchor" href="#5-how-to-structure-code-when-testing-many-ideas" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. How to structure code when testing many ideas</h2>
+<p>One of the problems when working in projects like Kaggle competitions is that how we can make plan of our code so that we can reproduce the results of previous ideas (even idea we tested one month ago) whenever we want. The problem will get bigger and bigger when we’re trying more sophisticated way that make taking notes difficult. The lesson I’ve learned from <a href="https://www.kaggle.com/hengck23">Heng</a> when looking at his starter code is that create first folder of dataset which contains all dataset, seconde folder which has common functions and a third folder for my principal code. When I want to test new different idea, I will make a copy of the third model and make changes on it. Following this way can make project management easier and I can reproduce my results whenever I need.</p>
+
+<h2 id="6-working-in-a-team-helps-you-go-faster-and-further">
+<a class="anchor" href="#6-working-in-a-team-helps-you-go-faster-and-further" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Working in a team helps you go faster and further</h2>
+<p>Besides learning the technical parts of the competition, a very important thing I’ve learned was how to work in a team. We all have work during the week, so we can only do Kaggle at our free time and have to do it in a smart way. Luckily, we worked at the same place, communicated every day and bounced ideas off each other. This competition is my first gold medal! I’m very glad I had this experience and very thankful to be a part of a wonderful team with Lam and Guillaume. I hope we will have more opportunities to work together in future competitions!</p>
+
+
+  </div><a class="u-url" href="/mrtunguyen.github.io/markdown/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/mrtunguyen.github.io/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/mrtunguyen.github.io/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/mrtunguyen.github.io/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blog on deep learning.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mrtunguyen" title="mrtunguyen"><svg class="svg-icon grey"><use xlink:href="/mrtunguyen.github.io/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/thanhtu19392" title="thanhtu19392"><svg class="svg-icon grey"><use xlink:href="/mrtunguyen.github.io/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
