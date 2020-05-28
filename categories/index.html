@@ -37,7 +37,7 @@ function wrap_img(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
         var elements = document.querySelectorAll(".post img");
         Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title")) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
                 const caption = document.createElement('figcaption');
                 var node = document.createTextNode(el.getAttribute("title"));
                 caption.appendChild(node);
@@ -73,45 +73,62 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="home">
 
+
 <h2>Contents</h2>
 
+  
+  
+  
 
-<ul>
+  <ul>
+  
+    <li><a href="#autoregressive">autoregressive</a></li>
+  
+    <li><a href="#deeplearning">deeplearning</a></li>
+  
+    <li><a href="#generative">generative</a></li>
+  
+    <li><a href="#kaggle">kaggle</a></li>
+  
+  </ul>
 
   
-  <li><a href="#markdown">markdown</a></li>
-
+      <h3 id ="autoregressive"><i class="fas fa-tags category-tags-icon"></i></i> autoregressive</h3>
+      <a name="autoregressive"></a>
+      <article class="archive-item">
+        <p class="post-meta post-meta-title"><a class="page-meta" href="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html">Autoregressive Generative Models</a>  • May 20, 2020</p>
+      </article>
+      
   
-  <li><a href="#kaggle">kaggle</a></li>
+      <h3 id ="deeplearning"><i class="fas fa-tags category-tags-icon"></i></i> deeplearning</h3>
+      <a name="deeplearning"></a>
+      <article class="archive-item">
+        <p class="post-meta post-meta-title"><a class="page-meta" href="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html">Autoregressive Generative Models</a>  • May 20, 2020</p>
+      </article>
+      
+  
+      <h3 id ="generative"><i class="fas fa-tags category-tags-icon"></i></i> generative</h3>
+      <a name="generative"></a>
+      <article class="archive-item">
+        <p class="post-meta post-meta-title"><a class="page-meta" href="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html">Autoregressive Generative Models</a>  • May 20, 2020</p>
+      </article>
+      
+  
+      <h3 id ="kaggle"><i class="fas fa-tags category-tags-icon"></i></i> kaggle</h3>
+      <a name="kaggle"></a>
+      <article class="archive-item">
+        <p class="post-meta post-meta-title"><a class="page-meta" href="/kaggle/2019/10/17/Kaggle-Modecular-Competition.html">Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5</a>  • Oct 17, 2019</p>
+      </article>
+      
+  
 
-</ul>
-
-
-
-    
-
-    <h3 id ="markdown"><i class="fas fa-tags category-tags-icon"></i></i> markdown</h3>
-    <a name="markdown"></a>
-    <article class="archive-item">
-      <p class="post-meta post-meta-title"><a class="page-meta" href="/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html">Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5</a>  • Oct 17, 2019</p>
-    </article>
-    
-
-    
-
-    <h3 id ="kaggle"><i class="fas fa-tags category-tags-icon"></i></i> kaggle</h3>
-    <a name="kaggle"></a>
-    <article class="archive-item">
-      <p class="post-meta post-meta-title"><a class="page-meta" href="/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html">Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5</a>  • Oct 17, 2019</p>
-    </article>
-    
 
 
 

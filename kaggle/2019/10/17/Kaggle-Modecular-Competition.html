@@ -9,13 +9,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
 <meta property="og:description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
-<link rel="canonical" href="https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
-<meta property="og:url" content="https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
+<link rel="canonical" href="https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html" />
+<meta property="og:url" content="https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html" />
 <meta property="og:site_name" content="Deep learning blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-10-17T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition","@type":"BlogPosting","headline":"Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5","dateModified":"2019-10-17T00:00:00-05:00","datePublished":"2019-10-17T00:00:00-05:00","url":"https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html"},"@context":"https://schema.org"}</script>
+{"description":"Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition","@type":"BlogPosting","headline":"Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5","url":"https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html","datePublished":"2019-10-17T00:00:00-05:00","dateModified":"2019-10-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrtunguyen.github.io/feed.xml" title="Deep learning blog" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5 | Deep learning blog</title>
@@ -24,13 +24,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
 <meta property="og:description" content="Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition" />
-<link rel="canonical" href="https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
-<meta property="og:url" content="https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" />
+<link rel="canonical" href="https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html" />
+<meta property="og:url" content="https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html" />
 <meta property="og:site_name" content="Deep learning blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-10-17T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition","@type":"BlogPosting","headline":"Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5","dateModified":"2019-10-17T00:00:00-05:00","datePublished":"2019-10-17T00:00:00-05:00","url":"https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html"},"@context":"https://schema.org"}</script>
+{"description":"Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition","@type":"BlogPosting","headline":"Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5","url":"https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html","datePublished":"2019-10-17T00:00:00-05:00","dateModified":"2019-10-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -41,7 +41,7 @@ function wrap_img(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
         var elements = document.querySelectorAll(".post img");
         Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title")) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
                 const caption = document.createElement('figcaption');
                 var node = document.createTextNode(el.getAttribute("title"));
                 caption.appendChild(node);
@@ -77,7 +77,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -97,9 +97,6 @@ window.onload = wrap_img;
 
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/categories/#markdown">markdown</a>
-        &nbsp;
       
         <a class="category-tags-link" href="/categories/#kaggle">kaggle</a>
         
@@ -177,7 +174,15 @@ The experience from <a href="https://www.linkedin.com/pulse/my-team-won-20000-1s
 <p>Besides learning the technical parts of the competition, a very important thing I’ve learned was how to work in a team. We all have work during the week, so we can only do Kaggle at our free time and have to do it in a smart way. Luckily, we worked at the same place, communicated every day and bounced ideas off each other. This competition is my first gold medal! I’m very glad I had this experience and very thankful to be a part of a wonderful team with Lam and Guillaume. I hope we will have more opportunities to work together in future competitions!</p>
 
 
-  </div><a class="u-url" href="/markdown/kaggle/2019/10/17/Kaggle-Modecular-Competition-Lessons-Learned-from-Finishing-in-Top-5.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="mrtunguyen/mrtunguyen.github.io"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/kaggle/2019/10/17/Kaggle-Modecular-Competition.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
