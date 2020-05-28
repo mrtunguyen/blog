@@ -3,11 +3,9 @@ layout: page
 title: About Me
 permalink: /about/
 ---
+Hi, this is Tu Nguyen. 
+This blog is a place to share my knowledge, ideas and experiences on deep learning in general.
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+Drop me an email: thanhtu19392 AT gmail.com if you have any questions or just wanna a dicussion. Thanks :)
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)**.

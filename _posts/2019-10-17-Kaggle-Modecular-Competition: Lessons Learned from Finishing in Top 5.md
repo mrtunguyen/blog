@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-categories: [markdown]
+categories: [markdown, kaggle]
 description: "Tricks and lessons I have learned from getting into top 5 of Kaggle Molecular Competition"
 title: "Kaggle Molecular Competition: Lessons Learned from Finishing in Top 5"
 ---
