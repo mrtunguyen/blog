@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://mrtunguyen.github.io/kaggle/2019/10/17/Kaggle-Modecular-Competition.html</loc>
+<loc>/kaggle/2019/10/17/Kaggle-Modecular-Competition.html</loc>
 <lastmod>2019-10-17T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://mrtunguyen.github.io/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html</loc>
+<loc>/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html</loc>
 <lastmod>2020-05-20T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://mrtunguyen.github.io/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>https://mrtunguyen.github.io/search/</loc>
+<loc>/search/</loc>
 </url>
 <url>
-<loc>https://mrtunguyen.github.io/categories/</loc>
+<loc>/categories/</loc>
 </url>
 </urlset>
