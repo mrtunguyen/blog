@@ -2,7 +2,10 @@
 keywords: fastai
 description: "An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code"
 title: "Autoregressive Generative Models"
-toc: true- branch: master- badges: true- comments: true
+toc: true
+branch: master
+badges: true
+comments: true
 author: Thanh Tu NGUYEN
 categories: [generative, autoregressive, deeplearning]
 nb_path: ../_notebooks/2020-05-20-Autoregressive-Generative-Models.ipynb
