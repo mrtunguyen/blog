@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
 <meta property="og:description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
-<link rel="canonical" href="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
-<meta property="og:url" content="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
+<link rel="canonical" href="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
+<meta property="og:url" content="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
 <meta property="og:site_name" content="Deep learning blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Deep learning blog" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrtunguyen.github.io//blog/feed.xml" title="Deep learning blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Autoregressive Generative Models | Deep learning blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="Autoregressive Generative Models" />
@@ -26,17 +26,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
 <meta property="og:description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
-<link rel="canonical" href="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
-<meta property="og:url" content="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
+<link rel="canonical" href="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
+<meta property="og:url" content="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
 <meta property="og:site_name" content="Deep learning blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Deep learning blog" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://mrtunguyen.github.io//blog/feed.xml" title="Deep learning blog" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
@@ -85,7 +85,7 @@ window.onload = wrap_img;
 </script>
 </head><body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Deep learning blog</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Deep learning blog</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -95,7 +95,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -111,20 +111,20 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      19 min read
+      20 min read
     
 </span></p>
 
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/categories/#generative">generative</a>
+        <a class="category-tags-link" href="/blog/categories/#generative">generative</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/categories/#autoregressive">autoregressive</a>
+        <a class="category-tags-link" href="/blog/categories/#autoregressive">autoregressive</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/categories/#deeplearning">deeplearning</a>
+        <a class="category-tags-link" href="/blog/categories/#deeplearning">deeplearning</a>
         
       
       </p>
@@ -136,19 +136,19 @@ window.onload = wrap_img;
           <div class="px-2">
 
     <a href="https://github.com/mrtunguyen/blog/tree/master/_notebooks/2020-05-20-Autoregressive-Generative-Models.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
     <a href="https://mybinder.org/v2/gh/mrtunguyen/blog/master?filepath=_notebooks%2F2020-05-20-Autoregressive-Generative-Models.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
     <a href="https://colab.research.google.com/github/mrtunguyen/blog/blob/master/_notebooks/2020-05-20-Autoregressive-Generative-Models.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
         </div>
@@ -382,16 +382,17 @@ $$\mathbf{p}(\mathbf{x}) = \prod_{i=1}^{N} \mathbf{x}_i = \prod_{i=1}^{N} \mathb
 </li>
 </ul>
 <p>Denote $\bf M^W$, $\bf M^V$ the masks for $\bf W$ and $\bf V$ respectively. The equations with masked autoencoders become:</p>
-\begin{align*}
+$$\begin{align*}
 {\bf h}({\bf x}) &amp;= {\bf g}({\bf b} + {\bf (W \odot M^W)x}) \\
 {\hat{\bf x}} &amp;= \text{sigm}({\bf c} + {\bf (V \odot M^V)h(x)})  
-\end{align*}<p>The last problem is only find a way to construct masks $\bf M^W$, $\bf M^V$ which sastify autoregressive property.<br>
+\end{align*}
+$$<p>The last problem is only find a way to construct masks $\bf M^W$, $\bf M^V$ which sastify autoregressive property.<br>
 Let $m^{l}(k)$ be the index assigned to hidden node $k$ in layer $l$. The condition would be as follows:</p>
 <ul>
 <li>First, for each hidden layer $l$, we sample $m^{l}(k)$ from a uniform distribution with range $[1,D−1]$. The index $D$ should be never used because nothing should depend on $D^{th}$ input</li>
 <li>
 <p>For a given node, it only connects to nodes in the previous layer that have an index less than or equal to its index.
-\begin{align*}
+$$\begin{align*}
 M^{W^l}_{k', k} = \left{</p>
 
 <pre><code>      \begin{array}{ll}
@@ -400,11 +401,12 @@ M^{W^l}_{k', k} = \left{</p>
       \end{array}
     \right. 
 </code></pre>
-<p>\end{align*}</p>
+<p>\end{align*}
+$$</p>
 </li>
 <li>
 <p>The output mask is slightly different:
-\begin{align*}
+$$\begin{align*}
 M^{V}_{d, k} = \left{</p>
 
 <pre><code>      \begin{array}{ll}
@@ -413,7 +415,8 @@ M^{V}_{d, k} = \left{</p>
       \end{array}
     \right.  
 </code></pre>
-<p>\end{align*}</p>
+<p>\end{align*}
+$$</p>
 </li>
 </ul>
 
@@ -456,15 +459,14 @@ M^{V}_{d, k} = \left{</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>1. Does ordering of input matters?  
-
-Actually, there is no natural ordering input. We can shuffle the input dimensions, so that MADE is able to model any arbitrary ordering.
-
-2. How can we generate new samples?
-
-Sampling steps:
-</code></pre>
+<ol>
+<li>Does ordering of input matters?  </li>
+</ol>
+<p>Actually, there is no natural ordering input. We can shuffle the input dimensions, so that MADE is able to model any arbitrary ordering.</p>
+<ol>
+<li>How can we generate new samples?</li>
+</ol>
+<p>Sampling steps:</p>
 <ul>
 <li>Randomly generate vector x, set $i=1$</li>
 <li>Feed $\bf x$ into autoencoder and generate outputs $\hat{\bf x}$ for the network, set $p =\bf \hat{x}_i$</li>
@@ -1269,13 +1271,14 @@ $$\mathbf{y} = \tanh (W_{k,f} \ast \mathbf{x}  {+ V_{k,f} \ast \mathbf{s}} ) \od
 <p>To address this issue, the paper authors came up with the new model including following modifications compared to PixelCNN:</p>
 <p><strong>Discretized logistic mixture likelihood</strong></p>
 <ul>
-<li>For each sub-pixel, generate a continuous distribution $ν$ representing the colour intensity instead of discrete distribution. For example, ν could be a mixture of <a href="https://en.wikipedia.org/wiki/Logistic_distribution">logistic distribution</a> parameterized by $\mu,s$ and the mixture weights $\pi$.</li>
-</ul>
+<li>For each sub-pixel, generate a continuous distribution $ν$ representing the colour intensity instead of discrete distribution. For example, ν could be a mixture of <a href="https://en.wikipedia.org/wiki/Logistic_distribution">logistic distribution</a> parameterized by $\mu,s$ and the mixture weights $\pi$.
+$$
 \begin{equation*}
 \nu \sim \sum_{i=1}^K \pi_i logistic(\mu_i, s_i) 
-\end{equation*}<ul>
+\end{equation*}
+$$</li>
 <li>We then convert this intensity to a mass function by assigning regions of it to the 0 to 255 pixels:
-\begin{equation*}
+$$\begin{equation*}
 P(x|\mu,s) =
   \begin{cases}
 <pre><code>  \sigma(\frac{x-\mu+0.5}{s}) &amp; \text{for } x = 0 \\
@@ -1284,9 +1287,10 @@ P(x|\mu,s) =
   1 - \sigma(\frac{x-\mu-0.5}{s}) &amp; \text{for } x = 255
 </code></pre>
   \end{cases}
-\end{equation*}</li>
+\end{equation*}
+$$
+where $\sigma$ is the sigmoid function.</li>
 </ul>
-<p>where $\sigma$ is the sigmoid function.</p>
 <p><strong>Conditioning on whole pixels</strong></p>
 <p>PixelCNN factorizes the model over the 3 sub pixels according to the color(RGB) which however, complicates the model. The dependency between color channels of a pixel is relatively simple and doesn’t require a deep model to train. Therefore, it is better to condition on whole pixels instead of separate colors and then output joint distributions over all 3 channels of the predicted pixel.</p>
 <ul>
@@ -1341,20 +1345,20 @@ The PixelCNN model is powerful enough to overfit on training data, leads to  low
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" hidden></a>
+</script><a class="u-url" href="/blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
+  <data class="u-url" href="/blog/"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="/feed.xml">
+          <a href="/blog/feed.xml">
             <svg class="svg-icon orange">
-              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>
           </a>
         </p>
@@ -1364,7 +1368,7 @@ The PixelCNN model is powerful enough to overfit on training data, leads to  low
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mrtunguyen" title="mrtunguyen"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/thanhtu19392" title="thanhtu19392"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mrtunguyen" title="mrtunguyen"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/thanhtu19392" title="thanhtu19392"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
 </div>
 
   </div>

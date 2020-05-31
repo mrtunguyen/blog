@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://mrtunguyen.github.io//blog/sitemap.xml
