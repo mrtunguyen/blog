@@ -324,7 +324,7 @@ $$\mathbf{p}(\mathbf{x}) = \prod_{i=1}^{N} \mathbf{x}_i = \prod_{i=1}^{N} \mathb
 \begin{align*}
 \mathcal{L_{\text{binary}}}({\bf \mathbf{x}}) &amp;= \sum_{i=1}^N -\mathbf{x}_i\log \hat{\mathbf{x}}_i - (1-\mathbf{x}_i)\log(1-\hat{\mathbf{x}_i}) \tag{2} \\
 \end{align*}</p>
-<p>To capture  the  structure  of  the  data-generating  distribution,  it is  therefore  important  that  something  in  the  training  criterion  or  the  parametrization  prevents  the  auto-encoder  from learning  the  identity  function,  which  has  zero  reconstruction error  everywhere.  This  is  achieved  through  various  means <strong>regularized autoencoders</strong> (refer to [2] to see more about it)</p>
+<p>To capture  the  structure  of  the  data-generating  distribution,  it is  therefore  important  that  something  in  the  training  criterion  or  the  parametrization  prevents  the  auto-encoder  from learning  the  identity  function,  which  has  zero  reconstruction error  everywhere.  This  is  achieved  through  various  means <strong>regularized autoencoders</strong> (refer to [3] to see more about it)</p>
 
 </div>
 </div>
@@ -1303,7 +1303,7 @@ where $\sigma$ is the sigmoid function.</li>
 <p><strong>Adding short-cut connections</strong></p>
 <p>The idea is pretty the same as <a href="https://arxiv.org/abs/1505.04597">Unet</a> model by introducing additional short-cut connections into the model to recover the losed informations from lower layers to higher layers of the model.</p>
 <p><strong>Regularization using dropout</strong> 
-The PixelCNN model is powerful enough to overfit on training data, leads to  lower perceptual quality of images while generating data. One effective way of regularizing neural networks is [dropout (Srivas-tava et al., 2014](<a href="http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf">http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf</a>.</p>
+The PixelCNN model is powerful enough to overfit on training data, leads to  lower perceptual quality of images while generating data. One effective way of regularizing neural networks is <a href="http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf">dropout (Srivas-tava et al., 2014</a>.</p>
 
 </div>
 </div>
