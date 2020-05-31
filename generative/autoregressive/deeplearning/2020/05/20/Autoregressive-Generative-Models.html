@@ -393,24 +393,24 @@ Let $m^{l}(k)$ be the index assigned to hidden node $k$ in layer $l$. The condit
 <li>
 <p>For a given node, it only connects to nodes in the previous layer that have an index less than or equal to its index.
 $$
-M^{W^l}_{k', k} =</p>
+M^{W^l}_{k', k} = {\begin{cases}</p>
 
-<pre><code>      \begin{cases}
-        1 \text{ if } m^l(k') \geq m^{l-1}(k)  \\
+<pre><code>        1 \text{ if } m^l(k') \geq m^{l-1}(k)  \\
         0 \text{ otherwise}
       \end{cases}
+      }
 </code></pre>
 <p>$$</p>
 </li>
 <li>
 <p>The output mask is slightly different:
 $$
-M^{V}_{d, k} =</p>
+M^{V}_{d, k} = {\begin{cases}</p>
 
-<pre><code>      \begin{cases}
-        1 \text{ if } d &gt; m^{L}(k)  \\
+<pre><code>        1 \text{ if } d &gt; m^{L}(k)  \\
         0 \text{ otherwise}
       \end{cases}
+      }
 </code></pre>
 <p>$$</p>
 </li>
@@ -422,7 +422,7 @@ M^{V}_{d, k} =</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/images/copied_from_nb/./my_icons/MADE_archi.png" alt="" title="Figure 2: MADE. Source [2]"></p>
+<p><img src="/images/copied_from_nb/my_icons/MADE_archi.png" alt="" title="Figure 2: MADE"></p>
 
 </div>
 </div>
