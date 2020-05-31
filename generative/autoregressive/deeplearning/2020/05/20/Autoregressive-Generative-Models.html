@@ -111,7 +111,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      20 min read
+      19 min read
     
 </span></p>
 
@@ -392,31 +392,27 @@ Let $m^{l}(k)$ be the index assigned to hidden node $k$ in layer $l$. The condit
 <li>First, for each hidden layer $l$, we sample $m^{l}(k)$ from a uniform distribution with range $[1,D−1]$. The index $D$ should be never used because nothing should depend on $D^{th}$ input</li>
 <li>
 <p>For a given node, it only connects to nodes in the previous layer that have an index less than or equal to its index.
-$$\begin{align*}
-M^{W^l}_{k', k} = \left{</p>
+$$
+M^{W^l}_{k', k} =</p>
 
-<pre><code>      \begin{array}{ll}
+<pre><code>      \begin{cases}
         1 \text{ if } m^l(k') \geq m^{l-1}(k)  \\
         0 \text{ otherwise}
-      \end{array}
-    \right. 
+      \end{cases}
 </code></pre>
-<p>\end{align*}
-$$</p>
+<p>$$</p>
 </li>
 <li>
 <p>The output mask is slightly different:
-$$\begin{align*}
-M^{V}_{d, k} = \left{</p>
+$$
+M^{V}_{d, k} =</p>
 
-<pre><code>      \begin{array}{ll}
+<pre><code>      \begin{cases}
         1 \text{ if } d &gt; m^{L}(k)  \\
         0 \text{ otherwise}
-      \end{array}
-    \right.  
+      \end{cases}
 </code></pre>
-<p>\end{align*}
-$$</p>
+<p>$$</p>
 </li>
 </ul>
 
@@ -426,7 +422,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/images/copied_from_nb/my_icons/MADE_archi.png" alt="" title="Figure 2: MADE. Source [2]"></p>
+<p><img src="/images/copied_from_nb/./my_icons/MADE_archi.png" alt="" title="Figure 2: MADE. Source [2]"></p>
 
 </div>
 </div>
@@ -958,7 +954,7 @@ $f, g$ are the different feature maps</p>
 <li>the vertical stack contributes to the horizontal stack with the $1\times1$ convolution while vertical stack should not access any information horizontal stack has - otherwise it will have access to pixels it shouldn’t see. However, the vertical stack can be vertically connected as it predicts pixel following those in the vertical stack.</li>
 <li>The convolutions with $W_f$ and $W_g$ are not combined into a single operation (which is essentially the masked convolution) to increase parallelization. The parallelization splits the $2p$ features maps into two groups of $p$</li>
 </ol>
-<p><img src="https://wiki.math.uwaterloo.ca/statwiki/images/thumb/6/61/gated_block.png/800px-gated_block.png" alt="" title="Figure 6: A gated PixelCNN block. [Source](https://wiki.math.uwaterloo.ca/statwiki/index.php?title=STAT946F17/Conditional_Image_Generation_with_PixelCNN_Decoders#Conditional_PixelCNN)"></p>
+<p><img src="https://wiki.math.uwaterloo.ca/statwiki/images/thumb/6/61/gated_block.png/800px-gated_block.png" alt="[Source](https://wiki.math.uwaterloo.ca/statwiki/index.php?title=STAT946F17/Conditional_Image_Generation_with_PixelCNN_Decoders#Conditional_PixelCNN)" title="Figure 6: A gated PixelCNN block">.</p>
 
 </div>
 </div>
@@ -1273,12 +1269,10 @@ $$\mathbf{y} = \tanh (W_{k,f} \ast \mathbf{x}  {+ V_{k,f} \ast \mathbf{s}} ) \od
 <ul>
 <li>For each sub-pixel, generate a continuous distribution $ν$ representing the colour intensity instead of discrete distribution. For example, ν could be a mixture of <a href="https://en.wikipedia.org/wiki/Logistic_distribution">logistic distribution</a> parameterized by $\mu,s$ and the mixture weights $\pi$.
 $$
-\begin{equation*}
 \nu \sim \sum_{i=1}^K \pi_i logistic(\mu_i, s_i) 
-\end{equation*}
 $$</li>
 <li>We then convert this intensity to a mass function by assigning regions of it to the 0 to 255 pixels:
-$$\begin{equation*}
+$$
 P(x|\mu,s) =
   \begin{cases}
 <pre><code>  \sigma(\frac{x-\mu+0.5}{s}) &amp; \text{for } x = 0 \\
@@ -1287,7 +1281,6 @@ P(x|\mu,s) =
   1 - \sigma(\frac{x-\mu-0.5}{s}) &amp; \text{for } x = 255
 </code></pre>
   \end{cases}
-\end{equation*}
 $$
 where $\sigma$ is the sigmoid function.</li>
 </ul>
