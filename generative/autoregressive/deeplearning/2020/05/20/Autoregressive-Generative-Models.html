@@ -422,7 +422,7 @@ M^{V}_{d, k} = {\begin{cases}</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/images/copied_from_nb/my_icons/MADE_archi.png" alt="" title="Figure 2: MADE"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/MADE_archi.png" alt="" title="Figure 2: MADE"></p>
 
 </div>
 </div>
@@ -866,7 +866,7 @@ M^{V}_{d, k} = {\begin{cases}</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>PixelCNN is a deep autoregressive generative model for images. Let's consider an image of size $n×n$, each pixel in image is a data point $\bf x=\big\\big\}$. The model starts generating pixels from the top left corner, from left to right and top to bottom (<a href="https://en.wikipedia.org/wiki/Raster_scan">raster scanning</a>).</p>
-<p><img src="/images/copied_from_nb/my_icons/pixel_cnn.png" alt="" title="Figure 3: PixelCNN. Source[3]"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/pixel_cnn.png" alt="" title="Figure 3: PixelCNN. Source[3]"></p>
 <p>Each pixel $\bf{x}_i$ is in turn jointly determined by three values,one for each of the color channels Red, Green  and Blue (RGB). Each of the colors is thus conditioned on the other channels as well as on all the previously generated pixels.
 
 $$\mathbf p( \mathbf x_i| \mathbf x_{&lt;i}) = \mathbf p(\mathbf x_{i,R}|\mathbf x_{&lt;i}). \mathbf p(x_{i,G}|\mathbf x_{&lt;i},\mathbf x_{i,R}). \mathbf p(x_{i,B}|\mathbf x_{&lt;i},\mathbf x_{i,R},\mathbf x_{i,G})$$
@@ -911,7 +911,7 @@ $$\mathbf p( \mathbf x_i| \mathbf x_{&lt;i}) = \mathbf p(\mathbf x_{i,R}|\mathbf
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>PixelCNN masking has one problem: <strong>blind spot</strong> in receptive field because the capturing of receptive field by a CNN proceed in a triangular fashion.</p>
-<p><img src="/images/copied_from_nb/my_icons/blind_spot_pixelCNN.png" alt="" title="Figure 4: Blind spot in PixelCNN"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/blind_spot_pixelCNN.png" alt="" title="Figure 4: Blind spot in PixelCNN"></p>
 <p>In order to address the blind spot, the authors use two filters (horizontal and vertical stacks) in conjunction to allow for capturing the whole receptive ﬁeld.</p>
 <ul>
 <li>
