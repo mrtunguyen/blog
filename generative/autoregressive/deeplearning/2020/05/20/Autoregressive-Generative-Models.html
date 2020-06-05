@@ -400,11 +400,11 @@ $$\ M^{W^l}_{k', k} =  \begin{cases}
 $$<ul>
 <li>The output mask is slightly different:</li>
 </ul>
-$$\[ M^{V}_{d, k} = \begin{cases}
+$$\ M^{V}_{d, k} = \begin{cases}
                     1 \text{ if } d &gt; m^{L}(k)  \\
                     0 \text{ otherwise}
                    \end{cases}
-\]
+\
 $$
 </div>
 </div>
@@ -1261,19 +1261,18 @@ $$\mathbf{y} = \tanh (W_{k,f} \ast \mathbf{x}  {+ V_{k,f} \ast \mathbf{s}} ) \od
 $$
 \nu \sim \sum_{i=1}^K \pi_i logistic(\mu_i, s_i) 
 $$</li>
-<li>We then convert this intensity to a mass function by assigning regions of it to the 0 to 255 pixels:
-$$
-P(x|\mu,s) =
-  \begin{cases}
-<pre><code>  \sigma(\frac{x-\mu+0.5}{s}) &amp; \text{for } x = 0 \\
-  \sigma(\frac{x-\mu+0.5}{s}) - \sigma(\frac{x-\mu-0.5}{s})
-      &amp; \text{for } 0 &lt; x &lt; 255 \\
-  1 - \sigma(\frac{x-\mu-0.5}{s}) &amp; \text{for } x = 255
-</code></pre>
-  \end{cases}
-$$
-where $\sigma$ is the sigmoid function.</li>
+<li>We then convert this intensity to a mass function by assigning regions of it to the 0 to 255 pixels:</li>
 </ul>
+$$
+\ P(x|\mu,s) =
+    \begin{cases}
+        \sigma(\frac{x-\mu+0.5}{s}) &amp; \text{for } x = 0 \\
+        \sigma(\frac{x-\mu+0.5}{s}) - \sigma(\frac{x-\mu-0.5}{s})
+            &amp; \text{for } 0 &lt; x &lt; 255 \\
+        1 - \sigma(\frac{x-\mu-0.5}{s}) &amp; \text{for } x = 255
+    \end{cases}
+\
+$$<p>where $\sigma$ is the sigmoid function.</p>
 <p><strong>Conditioning on whole pixels</strong></p>
 <p>PixelCNN factorizes the model over the 3 sub pixels according to the color(RGB) which however, complicates the model. The dependency between color channels of a pixel is relatively simple and doesn’t require a deep model to train. Therefore, it is better to condition on whole pixels instead of separate colors and then output joint distributions over all 3 channels of the predicted pixel.</p>
 <ul>
@@ -1286,7 +1285,7 @@ where $\sigma$ is the sigmoid function.</li>
 <p><strong>Adding short-cut connections</strong></p>
 <p>The idea is pretty the same as <a href="https://arxiv.org/abs/1505.04597">Unet</a> model by introducing additional short-cut connections into the model to recover the losed informations from lower layers to higher layers of the model.</p>
 <p><strong>Regularization using dropout</strong> 
-The PixelCNN model is powerful enough to overfit on training data, leads to  lower perceptual quality of images while generating data. One effective way of regularizing neural networks is <a href="http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf">dropout (Srivas-tava et al., 2014</a>.</p>
+The PixelCNN model is powerful enough to overfit on training data, leads to  lower perceptual quality of images while generating data. One effective way of regularizing neural networks is <a href="http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf">dropout (Srivas-tava et al., 2014)</a>.</p>
 
 </div>
 </div>
