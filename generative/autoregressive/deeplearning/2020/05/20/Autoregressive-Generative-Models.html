@@ -390,32 +390,22 @@ $$<p>The last problem is only find a way to construct masks $\bf M^W$, $\bf M^V$
 Let $m^{l}(k)$ be the index assigned to hidden node $k$ in layer $l$. The condition would be as follows:</p>
 <ul>
 <li>First, for each hidden layer $l$, we sample $m^{l}(k)$ from a uniform distribution with range $[1,D−1]$. The index $D$ should be never used because nothing should depend on $D^{th}$ input</li>
-<li>
-<p>For a given node, it only connects to nodes in the previous layer that have an index less than or equal to its index.
-$$
-M^{W^l}_{k', k} = {\begin{cases}</p>
-
-<pre><code>        1 \text{ if } m^l(k') \geq m^{l-1}(k)  \\
-        0 \text{ otherwise}
-      \end{cases}
-      }
-</code></pre>
-<p>$$</p>
-</li>
-<li>
-<p>The output mask is slightly different:
-$$
-M^{V}_{d, k} = {\begin{cases}</p>
-
-<pre><code>        1 \text{ if } d &gt; m^{L}(k)  \\
-        0 \text{ otherwise}
-      \end{cases}
-      }
-</code></pre>
-<p>$$</p>
-</li>
+<li>For a given node, it only connects to nodes in the previous layer that have an index less than or equal to its index.</li>
 </ul>
-
+$$\ M^{W^l}_{k', k} =  \begin{cases}
+                      1 \text{ if } m^l(k') \geq m^{l-1}(k)  \\
+                      0 \text{ otherwise}
+                    \end{cases}
+\
+$$<ul>
+<li>The output mask is slightly different:</li>
+</ul>
+$$\[ M^{V}_{d, k} = \begin{cases}
+                    1 \text{ if } d &gt; m^{L}(k)  \\
+                    0 \text{ otherwise}
+                   \end{cases}
+\]
+$$
 </div>
 </div>
 </div>
