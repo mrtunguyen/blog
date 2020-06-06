@@ -8,15 +8,15 @@
 <meta property="og:title" content="Autoregressive Generative Models" />
 <meta name="author" content="Thanh Tu NGUYEN" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
-<meta property="og:description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
+<meta name="description" content="A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code" />
+<meta property="og:description" content="A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code" />
 <link rel="canonical" href="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
 <meta property="og:url" content="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
 <meta property="og:site_name" content="Deep learning blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrtunguyen.github.io//blog/feed.xml" title="Deep learning blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Autoregressive Generative Models | Deep learning blog</title>
@@ -24,15 +24,15 @@
 <meta property="og:title" content="Autoregressive Generative Models" />
 <meta name="author" content="Thanh Tu NGUYEN" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
-<meta property="og:description" content="An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code" />
+<meta name="description" content="A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code" />
+<meta property="og:description" content="A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code" />
 <link rel="canonical" href="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
 <meta property="og:url" content="https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html" />
 <meta property="og:site_name" content="Deep learning blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-20T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Thanh Tu NGUYEN"},"description":"A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code","@type":"BlogPosting","headline":"Autoregressive Generative Models","url":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html","datePublished":"2020-05-20T00:00:00-05:00","dateModified":"2020-05-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrtunguyen.github.io//blog/generative/autoregressive/deeplearning/2020/05/20/Autoregressive-Generative-Models.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -103,7 +103,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Autoregressive Generative Models</h1><p class="page-description">An overview on Autoregressive Generative Models (MADE, PixelCNN, Conditional PixelCNN, PixelCNN++) with implementation code</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-20T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Autoregressive Generative Models</h1><p class="page-description">A complete overview on Autoregressive Generative Models (MADE, PixelCNN families, WaveNet, Seft-Attention, PixelSNAIL) with implementation code</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-20T00:00:00-05:00" itemprop="datePublished">
         May 20, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -185,6 +185,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#WaveNet">WaveNet </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Dilated-convolution">Dilated convolution </a></li>
+<li class="toc-entry toc-h3"><a href="#Softmax-distribution">Softmax distribution </a></li>
 <li class="toc-entry toc-h3"><a href="#Fast-WaveNet-Generation">Fast WaveNet Generation </a></li>
 <li class="toc-entry toc-h3"><a href="#Implementation">Implementation </a></li>
 </ul>
@@ -1569,7 +1570,7 @@ The PixelCNN model is powerful enough to overfit on training data, leads to  low
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/blog/images/copied_from_nb/my_icons/dilated_conv_1d.png" alt="" title="Figure 9: Dilated convolution in Wavenet"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/dilated_conv_1d.png" alt="" title="Figure 9: Dilated convolution in Wavenet. Source[11]"></p>
 
 </div>
 </div>
@@ -1577,7 +1578,26 @@ The PixelCNN model is powerful enough to overfit on training data, leads to  low
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Except for the dilated convolution, the Wavenet model is very similar to PixelCNN such as gated activation units technique or softmax distribution.</p>
+<p>Except for the dilated convolution, the Wavenet model is very similar to PixelCNN such as gated activation units technique.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Softmax-distribution">
+<a class="anchor" href="#Softmax-distribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Softmax distribution<a class="anchor-link" href="#Softmax-distribution"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The raw audio output is stored as a sequence of 16-bit scalar values (one per time step), thus the softmax output is 2^16=65,536 probabilities per timestep. WaveNet applies a <a href="https://en.wikipedia.org/wiki/%CE%9C-law_algorithm">μ-law companding transformation</a> to the data and then quantize it to 256 possible values:</p>
+$$f(\bf{x}_t) = \text{sign} (x_t) \frac{\ln(1 + \mu |x_t|)}{\ln(1 + \mu)}$$<p>
+where $x_t \in (−1,1), \mu = 255$</p>
 
 </div>
 </div>
@@ -1595,6 +1615,15 @@ The PixelCNN model is powerful enough to overfit on training data, leads to  low
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>With the implemenentation of Wavenet in Figure 9, since the computation forms a binary tree, the overall computation time for a single output is $O(2^L)$, where $L$ is the number of layers in the network. When $L$ is large, this is extremely undesirable. This <a href="https://arxiv.org/pdf/1611.09482.pdf">paper</a> proposed approach removes redundant convolution operations by caching previous calculations instead of recomputing many variables that have already been computed for previous samples, thereby reducing the complexity to $O(L)$ time.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The below figure shows the model with 2 convolutional and 2 transposed convolutional layers with strid of 2, wherein blue dots indicate the cached states and orange bots are computed in the current step.</p>
+<p><img src="/blog/images/copied_from_nb/my_icons/fast_generation.png" alt="" title="Figure 10: Fast generation for a network with strided convolutions"></p>
 
 </div>
 </div>
@@ -2228,7 +2257,7 @@ The PixelSNAIL model is composed of two blocks:</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/blog/images/copied_from_nb/my_icons/pixelSNAIL.png" alt="" title="Figure 10: PixelSNAIL block"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/pixelSNAIL.png" alt="" title="Figure 11: PixelSNAIL block. Source[15]"></p>
 
 </div>
 </div>
@@ -2244,7 +2273,7 @@ The PixelSNAIL model is composed of two blocks:</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/blog/images/copied_from_nb/my_icons/pixelSNAIL_arch.png" alt="" title="Figure 11: PixelSNAIL architecture"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/pixelSNAIL_arch.png" alt="" title="Figure 12: PixelSNAIL architecture. Source[15]"></p>
 
 </div>
 </div>
@@ -2262,7 +2291,7 @@ The PixelSNAIL model is composed of two blocks:</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We've seen in PixelCNN or other architectures, the pixel ordering is raster scanning where along each row left  pixels  come  before  right  pixels  and  top  rows  come before bottom rows. The raster scan order-ing only has a small number neighboring pixels available in the conditioning context $\bf x_1, . . . , x_{i−1}$:  only to the left and above and most of the context is wasted on regions that might have little correlation with the current pixel like the far top-right corner. Since we can access any pixels in its context through attention operator, PixelSNAIL allows zigzag ordering.</p>
-<p><img src="/blog/images/copied_from_nb/my_icons/pixels-ordering.png" alt="" title="Figure 12: Pixels ordering"></p>
+<p><img src="/blog/images/copied_from_nb/my_icons/pixels-ordering.png" alt="" title="Figure 13: Pixels ordering. Source[15]"></p>
 
 </div>
 </div>
