@@ -1,4 +1,4 @@
-https://mrtunguyen.github.io/
+https://mrtunguyen.github.io/blog
 
 # My Blog
 
